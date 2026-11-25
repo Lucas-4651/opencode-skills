@@ -2,7 +2,7 @@
 
 > Production-ready agent skills for **OpenCode**. One line to install, auto-updating catalog, tested on OpenCode — not ported from Claude Code.
 
-[![npm](https://img.shields.io/badge/npm-opencode--skills-blue)](https://www.npmjs.com/package/opencode-skills)
+[![stars](https://img.shields.io/github/stars/Lucas-4651/opencode-skills?style=flat)](https://github.com/Lucas-4651/opencode-skills/stargazers)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![OpenCode](https://img.shields.io/badge/works%20with-OpenCode-7c3aed)](https://opencode.ai)
 
@@ -26,13 +26,15 @@ Restart OpenCode. That's it — no files copied, and skills update automatically
 Not sure of the URL? Let the CLI print it for you:
 
 ```bash
-npx opencode-skills install
+npx --yes github:Lucas-4651/opencode-skills install
 ```
+
+The CLI runs straight from GitHub — there is no npm package to install and no publish step. The catalog install itself needs no CLI at all.
 
 Prefer local files (offline, or you want to edit them)?
 
 ```bash
-npx opencode-skills install --local
+npx --yes github:Lucas-4651/opencode-skills install --local
 ```
 
 Local install refuses to overwrite a skill you have edited. Add `--force` only if you are sure you want to replace those files.
@@ -70,7 +72,7 @@ skills/
 Each install can display how many skills are active, linked back to this repo:
 
 ```bash
-npx opencode-skills scorecard --out scorecard.svg
+npx --yes github:Lucas-4651/opencode-skills scorecard --out scorecard.svg
 ```
 
 Wrap it in a link so the badge is a real backlink — an SVG loaded through a Markdown `![]()` embed is not clickable on GitHub:
@@ -86,11 +88,11 @@ Every badge is a backlink. That's the whole growth loop.
 ## CLI
 
 ```bash
-npx opencode-skills install        # print the opencode.json snippet
-npx opencode-skills install --local # copy skills into ~/.config/opencode/skills
-npx opencode-skills list           # list skills and descriptions
-npx opencode-skills validate       # validate catalog + all SKILL.md files
-npx opencode-skills scorecard      # generate a shareable SVG badge
+npx --yes github:Lucas-4651/opencode-skills install        # print the opencode.json snippet
+npx --yes github:Lucas-4651/opencode-skills install --local # copy skills into ~/.config/opencode/skills
+npx --yes github:Lucas-4651/opencode-skills list           # list skills and descriptions
+npx --yes github:Lucas-4651/opencode-skills validate       # validate catalog + all SKILL.md files
+npx --yes github:Lucas-4651/opencode-skills scorecard      # generate a shareable SVG badge
 ```
 
 ## Contributing a skill
@@ -108,8 +110,8 @@ See `@skill-forge` for the full contract.
 The CLI derives the catalog URL from `package.json` → `repository`. Forked the repo? Override per run:
 
 ```bash
-npx opencode-skills install --repo your-user/your-fork
-OPENCODE_SKILLS_REPO=your-user/your-fork npx opencode-skills install
+npx --yes github:Lucas-4651/opencode-skills install --repo your-user/your-fork
+OPENCODE_SKILLS_REPO=your-user/your-fork npx --yes github:Lucas-4651/opencode-skills install
 ```
 
 ## License

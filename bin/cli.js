@@ -144,7 +144,13 @@ function commandList() {
     console.log(`  @${entry.name}`)
     console.log(`    ${skill.description || '(no description)'}`)
   }
-  console.log('\nInstall: npx opencode-skills install')
+  let installHint = 'npx --yes github:OWNER/opencode-skills install'
+  try {
+    installHint = `npx --yes github:${parseRepository(pkg.repository)} install`
+  } catch {
+    // A fork without a configured repository still gets a usable hint.
+  }
+  console.log(`\nInstall: ${installHint}`)
 }
 
 function commandValidate() {
