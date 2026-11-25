@@ -1,0 +1,36 @@
+{
+  "name": "opencode-skills",
+  "version": "0.1.0",
+  "description": "Production-ready agent skills for OpenCode. One command to install, auto-updating catalog, tested on OpenCode.",
+  "bin": {
+    "opencode-skills": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "validate": "node bin/cli.js validate",
+    "list": "node bin/cli.js list"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/opencode-skills.git"
+  },
+  "keywords": [
+    "opencode",
+    "agent-skills",
+    "coding-agents",
+    "mcp",
+    "ai-agents",
+    "skills"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
