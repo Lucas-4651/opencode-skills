@@ -1,0 +1,12 @@
+name: opencode-skills
+repo: https://github.com/Lucas-4651/opencode-skills
+tagline: OpenCode-native agent skills with a one-line HTTP catalog install and auto-updating versions
+description: >-
+  A curated pack of agent skills built and tested for OpenCode rather than ported
+  from Claude Code. Includes opencode-doctor, skill-forge, mcp-wrap, repo-onboard,
+  and repo-diagram. Installs with a single skills entry in opencode.json via
+  OpenCode's HTTP catalog, so skills auto-update on version bumps with no files
+  copied and no npm package. A CLI is available via npx --yes
+  github:Lucas-4651/opencode-skills for local installs, validation, and a
+  shareable scorecard badge. Targets OpenCode V2's HTTP catalog; SKILL.md
+  directory discovery also works with V1-style local sources.

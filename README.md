@@ -47,6 +47,7 @@ Local install refuses to overwrite a skill you have edited. Add `--force` only i
 | `@skill-forge` | Turns a repo, CLI or repeated workflow into a valid directory-based skill with a machine-readable contract |
 | `@mcp-wrap` | Wraps an API or OpenAPI spec into a small read-first MCP server plus its OpenCode registration |
 | `@repo-onboard` | Generates a verified `AGENTS.md` / `CLAUDE.md` from an unfamiliar codebase |
+| `@repo-diagram` | Generates verified Mermaid architecture diagrams from real code, with an evidence table for every component and edge |
 
 Load any skill explicitly with `@skill-id`, or let OpenCode select it by description.
 
@@ -63,7 +64,9 @@ skills/
 │   └── SKILL.md
 ├── mcp-wrap/
 │   └── SKILL.md
-└── repo-onboard/
+├── repo-onboard/
+│   └── SKILL.md
+└── repo-diagram/
     └── SKILL.md
 ```
 

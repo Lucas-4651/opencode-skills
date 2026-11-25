@@ -19,6 +19,11 @@
       "name": "repo-onboard",
       "version": "1",
       "files": ["SKILL.md"]
+    },
+    {
+      "name": "repo-diagram",
+      "version": "1",
+      "files": ["SKILL.md"]
     }
   ]
 }
