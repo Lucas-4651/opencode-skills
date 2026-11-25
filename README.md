@@ -16,7 +16,7 @@ Add one line to `opencode.json`:
 {
   "$schema": "https://opencode.ai/config.json",
   "skills": [
-    "https://raw.githubusercontent.com/YOUR_USERNAME/opencode-skills/main/skills/"
+    "https://raw.githubusercontent.com/Lucas-4651/opencode-skills/main/skills/"
   ]
 }
 ```
@@ -76,7 +76,7 @@ npx opencode-skills scorecard --out scorecard.svg
 Wrap it in a link so the badge is a real backlink — an SVG loaded through a Markdown `![]()` embed is not clickable on GitHub:
 
 ```html
-<a href="https://github.com/YOUR_USERNAME/opencode-skills">
+<a href="https://github.com/Lucas-4651/opencode-skills">
   <img src="./scorecard.svg" alt="opencode-skills" />
 </a>
 ```
@@ -103,14 +103,14 @@ npx opencode-skills scorecard      # generate a shareable SVG badge
 
 See `@skill-forge` for the full contract.
 
-## Before publishing
+## Overriding the catalog URL
 
-Replace `YOUR_USERNAME` in two places:
+The CLI derives the catalog URL from `package.json` → `repository`. Forked the repo? Override per run:
 
-- `package.json` → `repository.url`
-- this README → the `skills` URL
-
-The CLI derives the catalog URL from `package.json`, so `npx opencode-skills install` will print the right snippet automatically once that's set. You can also override it per run with `--repo owner/repo` or `OPENCODE_SKILLS_REPO`.
+```bash
+npx opencode-skills install --repo your-user/your-fork
+OPENCODE_SKILLS_REPO=your-user/your-fork npx opencode-skills install
+```
 
 ## License
 
